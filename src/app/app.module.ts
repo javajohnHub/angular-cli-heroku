@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { TestComponentComponent } from './test-component/test-component.component';
+import { SiblingComponent } from './sibling/sibling.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CockpitComponent,
-    TestComponentComponent
+    TestComponentComponent,
+    SiblingComponent
   ],
   imports: [
     BrowserModule,
