@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   album: string;
+  test: string;
+  userName: string;
+  userEmail: string;
+  
 
   getServerData(event){
     console.log(event)
@@ -17,6 +21,14 @@ export class AppComponent {
   }
 
   getTestData(event){
-    console.log(event)
+    // console.log(event)
+    this.test = event;
+  }
+
+  getUserDetails(event) {
+    console.log(event);
+    this.userName = event.userName;
+    this.userEmail = event.userEmail;
+
   }
 }

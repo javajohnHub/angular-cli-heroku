@@ -36,8 +36,7 @@ export class CockpitComponent implements OnInit {
 
   onTest(input: HTMLInputElement){
     this.testData.emit(this.testInput.nativeElement.value);
-    console.log(this.testInput.nativeElement.value);
-  }
+   }
   
 
 }
