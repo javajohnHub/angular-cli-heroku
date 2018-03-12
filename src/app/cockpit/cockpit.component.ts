@@ -8,6 +8,7 @@ import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '
 export class CockpitComponent implements OnInit {
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output() blueprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+  @Output() testData = new EventEmitter<string>();
   // newServerName = '';
   // newServerContent = '';
   @ViewChild('serverContentInput') serverContentInput: ElementRef;
@@ -34,6 +35,7 @@ export class CockpitComponent implements OnInit {
   }
 
   onTest(input: HTMLInputElement){
+    this.testData.emit(this.testInput.nativeElement.value);
     console.log(this.testInput.nativeElement.value);
   }
   

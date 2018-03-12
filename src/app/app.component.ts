@@ -15,4 +15,8 @@ export class AppComponent {
   getBlueprintData(event){
     console.log(event)
   }
+
+  getTestData(event){
+    console.log(event)
+  }
 }
