@@ -1,5 +1,3 @@
 <div class="container">
-  <input type="text" [(ngModel)]="album">
-
-  {{album}}
+  <app-cockpit (serverCreated)="getServerData($event)" (blueprintCreated)="getBlueprintData($event)"></app-cockpit>
 </div>

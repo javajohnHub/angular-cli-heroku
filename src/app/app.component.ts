@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   album: string;
+
+  getServerData(event){
+    console.log(event)
+  }
+
+  getBlueprintData(event){
+    console.log(event)
+  }
 }
