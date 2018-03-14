@@ -7,20 +7,25 @@ import { AppComponent } from './app.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { SiblingComponent } from './sibling/sibling.component';
-
+import { WeatherComponent } from './weather/weather.component';
+import { WeatherService } from './weather.service';
+import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     CockpitComponent,
     TestComponentComponent,
-    SiblingComponent
+    SiblingComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

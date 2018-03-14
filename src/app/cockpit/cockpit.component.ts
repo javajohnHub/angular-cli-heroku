@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-cockpit',
@@ -13,10 +14,11 @@ export class CockpitComponent implements OnInit {
   // newServerContent = '';
   @ViewChild('serverContentInput') serverContentInput: ElementRef;
   @ViewChild('testChild') testInput: ElementRef;
-
-  constructor() { }
+  geolocationPosition;
+  constructor(private _weatherService: WeatherService) { }
 
   ngOnInit() {
+    
   }
 
   onAddServer(nameInput: HTMLInputElement) {
